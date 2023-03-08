@@ -1,19 +1,19 @@
-import { useState } from 'react'
+import { useState } from "react";
 
-import Hamburger from 'hamburger-react'
-import Logo from '../../assets/Logo VFHAir.svg'
+import Hamburger from "hamburger-react";
+import Logo from "../../assets/Logo VFHAir.svg";
 
-import { ContentMenu, ContentMenuMobile, NavbarMenu } from './Styles'
-import { Link } from 'react-router-dom'
+import { ContentMenu, ContentMenuMobile, NavbarMenu } from "./Styles";
+import { Link } from "react-router-dom";
 
 export function Navbar() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
     <NavbarMenu>
       <Link to="/">
         <img src={Logo} alt="" />
-      </Link>{' '}
+      </Link>{" "}
       <ContentMenu>
         <ul>
           <li>
@@ -24,6 +24,12 @@ export function Navbar() {
           </li>
           <li>
             <Link to="/products">Produtos</Link>
+          </li>
+          <li>
+            <Link to="/history">História</Link>
+          </li>
+          <li>
+            <Link to="/history">História</Link>
           </li>
           <li>
             <Link to="/history">História</Link>
@@ -54,5 +60,5 @@ export function Navbar() {
         />
       </ContentMenuMobile>
     </NavbarMenu>
-  )
+  );
 }
